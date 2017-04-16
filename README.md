@@ -5,20 +5,49 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+# Ruby version
+2.3.1
 
-* System dependencies
+# Database structure
 
-* Configuration
+## users
+### column and constraint
+:name, :string, unique: true, null: false, index: true
 
-* Database creation
+### relation
+has_many: groups, through: group_users
+has_many: group_users
+has_many: messages
 
-* Database initialization
+## groups
+### column and constraint
+:name, :string, unique: true, null: false
 
-* How to run the test suite
+### relation
+has_many: users, through: group_users
+has_many: group_users
+has_many: messages
 
-* Services (job queues, cache servers, search engines, etc.)
+## group_users
+### column and constraint
+:user, :references, foregin_key: true
+:user, :references, foregin_key: true
 
-* Deployment instructions
+### relation
+belogs_to :user
+belogs_to :group
 
-* ...
+### multicolumn index
+[:user, :group]
+
+# messages
+### column and constraint
+:comment, :text
+:image, :string
+:user, :references, foreign_key: true
+:group, :references, foreign_key: true
+
+### relation
+belogs_to :user
+belogs_to :group
+
