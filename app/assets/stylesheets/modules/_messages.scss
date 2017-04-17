@@ -1,0 +1,166 @@
+#sub{
+  float: left;
+  height: 100vh;
+  width: 300px;
+  background-color: #2f3e51;
+  .user{
+    display: table;
+    height: 100px;
+    width: 100%;
+    vertical-align: middle;
+    background-color: #253141;
+    padding: 0 20px;
+    margin: 0 0 20px 0;
+    &__name{
+      display: table-cell;
+      vertical-align: middle;
+      color: $fontWhite;
+      font-size: 16px;
+      font-weight: bold;
+      word-break: break-all;
+    }
+    &__action{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: right;
+      font-size: 16px;
+      &--left, &--right{
+        display: inline-block;
+        a{
+          color: $fontWhite;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .groups{
+    width: 100%;
+    padding: 0 20px;
+    .group{
+      width: 100%;
+      margin: 0 0 40px 0;
+      word-break: break-all;
+      &__name{
+        font-size: 15px;
+        color: $fontWhite;
+        margin: 0 0 5px 0;
+      }
+      &__message{
+        font-size: 11px;
+        color: $fontWhite;
+      }
+    }
+  }
+}
+#main{
+  float: right;
+  height: 100%;
+  width: calc(100vw - 300px);
+  .group{
+    height: 100px;
+    width: 100%;
+    padding: 0 40px;
+    border-bottom: 1px solid #eeeeee;
+    @include clearfix();
+    &__info{
+      float: left;
+      margin: 35px 0 0 0;
+      word-break: break-all;
+      &--name{
+        font-size: 20px;
+        color: #333333;
+        margin: 0 0 15px 0;
+      }
+      &--member{
+        font-size: 12px;
+        color: $fontLightGray;
+      }
+    }
+    &__edit{
+      float: right;
+      display: table;
+      height: 40px;
+      font-size: 20px;
+      margin: 28px 0 0 0;
+      padding: 0 20px;
+      border: 1px solid $skyBlue;
+      a{
+        display: table-cell;
+        vertical-align: middle;
+        color: $skyBlue;
+        text-decoration: none;
+      }
+    }
+  }
+  .messages{
+    height: calc(100vh - 100px - 90px);
+    width: 100%;
+    padding: 0 40px;
+    overflow-y: scroll;
+    .message{
+      width: 100%;
+      padding: 46px 0 0 0;
+      word-break: break-all;
+      &__info{
+        margin: 0 0 10px 0;
+        &--name{
+          display: inline-block;
+          font-size: 16px;
+          color: $fontBlack;
+          font-weight: bold;
+        }
+        &--date{
+          display: inline-block;
+          font-size: 12px;
+          color: $fontLightGray;
+          margin: 0 0 0 10px;
+        }
+      }
+      &__body{
+        font-size: 14px;
+        color: $fontBlack;
+      }
+    }
+  }
+  .input{
+    height: 90px;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: #aaaaaa;
+    @include clearfix();
+    &__data{
+      float: left;
+      display: table;
+      width: calc(100% - 15px - 100px);
+      height: 50px;
+      padding: 0 10px;
+      background-color: #ffffff;
+      &--text{
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        font-size: 16px;
+        color: $fontBlack;
+      }
+      &--image{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+      }
+    }
+    &__post{
+      float: left;
+      display: table;
+      height: 100%;
+      width: 100px;
+      margin: 0 0 0 15px;
+      background-color: $skyBlue;
+      &--submit{
+        color: $fontWhite;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+}

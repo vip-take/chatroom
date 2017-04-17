@@ -1,0 +1,26 @@
+= render 'application/sub_column'
+#main
+  .group
+    .group__info
+      .group__info--name
+        エンジニアグループ
+      .group__info--member
+        MEMBER:
+        taketani, suzuki
+    .group__edit
+      = link_to root_path do
+        %span
+          edit
+  .messages
+    = render 'messages/message'
+    = render 'messages/message'
+  .input
+    .input__data
+      .input__data--text
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      .input__data--image
+        .fa.fa-cog
+    .input__post
+      .input__post--submit
+        POST
+
