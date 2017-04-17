@@ -10,7 +10,6 @@
     vertical-align: middle;
     background-color: #253141;
     padding: 0 20px;
-    margin: 0 0 20px 0;
     &__name{
       display: table-cell;
       vertical-align: middle;
@@ -35,11 +34,13 @@
   }
   .groups{
     width: 100%;
-    padding: 0 20px;
     .group{
       width: 100%;
-      margin: 0 0 40px 0;
+      padding: 20px 20px;
       word-break: break-all;
+      &:hover{
+      background-color: rgba(#ffffff, 0.1);
+      }
       &__name{
         font-size: 15px;
         color: $fontWhite;
