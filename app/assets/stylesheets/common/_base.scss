@@ -12,5 +12,20 @@ html, body{
 .alert{
   color: $fontWhite;
   text-align: center;
+}
+
+.alert-info{
   background-color: $skyBlue;
+}
+
+.alert-danger{
+  background-color: #F35500;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
