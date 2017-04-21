@@ -1,19 +1,19 @@
-= render 'application/sub_column'
+= render 'application/sub_column', groups: @groups
 #main
   .group
     .group__info
       .group__info--name
-        エンジニアグループ
+        = @group.name
       .group__info--member
         MEMBER:
-        taketani, suzuki
+        = @group.users.pluck(:name).join(', ')
     .group__edit
-      = link_to edit_group_path(1) do
+      = link_to edit_group_path(@group) do
         %span
           edit
   .messages
-    = render 'messages/message'
-    = render 'messages/message'
+    = render 'groups/messages/message'
+    = render 'groups/messages/message'
   .input
     .input__data
       .input__data--text

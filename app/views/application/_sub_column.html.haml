@@ -10,8 +10,10 @@
         = link_to new_group_path do
           .fa.fa-cog
   .groups
-    .group
-      .group__name
-        groupname
-      .group__message
-        今日も晴天ですね〜〜〜。
+    - groups.each do |group|
+      = link_to group_messages_path(group) do
+        .group
+          .group__name
+            = group.name
+          .group__message
+            今日も晴天ですね〜〜〜。
