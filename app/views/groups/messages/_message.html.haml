@@ -1,8 +1,8 @@
 .message
   .message__info
     .message__info--name
-      taketani
+      = message.user.name
     .message__info--date
-      2016/2/10
+      = message.created_at
   .message__body
-    今日は頑張りましょう！！！！今日は頑張りましょう！！！！今日は頑張りましょう！！！！今日は頑張りましょう！！！！今日は頑張りましょう！！！！今日は頑張りましょう！！！！今日は頑張りましょう！！！！
+    = message.comment

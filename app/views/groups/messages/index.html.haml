@@ -12,15 +12,12 @@
         %span
           edit
   .messages
-    = render 'groups/messages/message'
-    = render 'groups/messages/message'
+    = render @messages
   .input
-    .input__data
-      .input__data--text
-        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      .input__data--image
-        .fa.fa-cog
-    .input__post
-      .input__post--submit
-        POST
+    = form_for [@group, @message] do |f|
+      .input__data
+        = f.text_field :comment, placeholder: '文字を入れてください', class: 'input__data--text'
+        .input__data--image
+          .fa.fa-cog
+      = f.submit "POST", class: 'input__post'
 
