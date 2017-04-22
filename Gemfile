@@ -22,6 +22,14 @@ gem 'rails-i18n', '~> 5.0.0'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
+
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'capybara'
+  gem "database_cleaner"
+  gem "launchy"
+  gem "selenium-webdriver"
 end
 
 group :development do
