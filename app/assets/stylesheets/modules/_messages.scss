@@ -121,6 +121,14 @@
         font-size: 14px;
         color: $fontBlack;
       }
+      &__image{
+        img{
+          height: 100px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
     }
   }
   .input{
