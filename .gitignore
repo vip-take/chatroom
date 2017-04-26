@@ -20,3 +20,6 @@
 
 #Rubymine
 .idea/*
+
+#upload folder
+public/uploads/*
