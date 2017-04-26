@@ -155,6 +155,9 @@
         display: table-cell;
         vertical-align: middle;
         text-align: right;
+        input{
+          display: none;
+        }
       }
     }
     &__post{
